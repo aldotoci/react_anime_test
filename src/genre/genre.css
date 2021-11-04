@@ -1,0 +1,9 @@
+.pages span{
+    color: #e9ecef;;
+    font-size: 20px;
+}
+.pages a {
+    margin-left: 20px;
+    font-size: 20px;
+    text-decoration: underline;
+}

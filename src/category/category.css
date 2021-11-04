@@ -1,0 +1,184 @@
+body {
+    margin: 0;
+    font-family: "Baloo Tamma 2",Montserrat,"Open Sans",Lato,Tahoma;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6d6d6d;
+    text-align: left;
+    background-color: #161616;
+}
+a {
+    color: #e9ecef;
+    text-decoration: none;
+    background-color: transparent;
+}
+#info {
+    margin-top: 50px;
+}
+section {
+    margin-bottom: 25px;
+    display: block;
+}
+#info .poster {
+    float: left;
+    width: 250px;
+}
+section#info .poster > div {
+    position: relative;
+    display: block;
+    padding-bottom: 145%;
+    border: 5px solid rgba(255,255,255,.05);
+}
+section#info .poster > div img {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+}
+section#info .info {
+    margin-left: 270px;
+}
+section#info .info .title {
+    color: #ced4da;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    font-size: 1.62em;
+    font-weight: 400;
+}
+section#info .info .alias {
+    color: #4b5157;
+    font-size: .95em;
+    font-style: italic;
+}
+#info .info .desc {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #6d6d6d;
+}
+#info .info span {
+    color: #ababab;
+    margin-left: 6px;
+}
+section#info .info a {
+    color: #ced4da;
+    text-decoration: none;
+}
+section#info .info span {
+    color: #ababab;
+    margin-left: 6px;
+}
+.col2 div span a{
+    color: #ced4da;
+}
+.col2{
+    margin-left: 270px;
+}
+
+
+section#episodes .group {
+    margin-bottom: 20px;
+}
+section#episodes .group .server {
+    
+    margin-right: 20px;
+    float: right;
+    margin-right: 0;
+}
+.dropdown, .dropleft, .dropright, .dropup {
+    position: relative;
+}
+section#episodes .group .server button {
+    border: none;
+    background: #262626;
+    border: 1px solid #262626;
+    color: #6d6d6d;
+    height: 36px;
+    line-height: 36px;
+    padding: 1px 15px;
+    font-size: 1em;
+    outline: 0;
+    -webkit-transition: all .15s ease-in-out 0s;
+    -moz-transition: all .15s ease-in-out 0s;
+    transition: all .15s ease-in-out 0s;
+}
+section#episodes .group .server button span {
+    color: #ababab;
+}
+section#episodes .group .server .dropdown-menu {
+    border-radius: 0;
+    border: none;
+    padding: 10px;
+    right: 0;
+    left: auto;
+}
+section#episodes .group ul.ranges {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+section#episodes .group ul.ranges li.active {
+    color: #dee2e6;
+    text-decoration: underline;
+}
+section#episodes .group ul.ranges li {
+    display: inline-block;
+    color: #6d6d6d;
+    padding: 3px 5px;
+    cursor: pointer;
+    -webkit-transition: all .15s ease-in-out 0s;
+    -moz-transition: all .15s ease-in-out 0s;
+    transition: all .15s ease-in-out 0s;
+}
+section#episodes .group ul.ranges li {
+    display: inline-block;
+    color: #6d6d6d;
+    padding: 3px 5px;
+    cursor: pointer;
+    -webkit-transition: all .15s ease-in-out 0s;
+    -moz-transition: all .15s ease-in-out 0s;
+    transition: all .15s ease-in-out 0s;
+}
+section#episodes ul.episodes {
+    list-style: none;
+    margin: 0 -3.8px;
+    padding: 0;
+}
+section#episodes ul.episodes li {
+    float: left;
+    height: 33px;
+    line-height: 33px;
+    min-width: 55.66px;
+    margin: 3.8px;
+}
+section#episodes ul.episodes li a.active {
+    color: #111;
+    border-color: #ced4da;
+    background: #ced4da;
+}
+section#episodes ul.episodes li a:visited {
+    background-color: #171717;
+    border-color: #2d2d2d;
+    color: #6d6d6d;
+}
+section#episodes ul.episodes li a {
+    display: block;
+    font-size: 1.15em;
+    width: 61%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: all .15s ease-in-out 0s;
+    -moz-transition: all .15s ease-in-out 0s;
+    transition: all .15s ease-in-out 0s;
+    padding: 1px 10px 0;
+    color: #6d6d6d;
+    border: 1px solid #4b5157;
+        border-top-color: rgb(75, 81, 87);
+        border-right-color: rgb(75, 81, 87);
+        border-bottom-color: rgb(75, 81, 87);
+        border-left-color: rgb(75, 81, 87);
+    background-color: #161616;
+}

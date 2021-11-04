@@ -1,0 +1,106 @@
+.title{
+    text-transform: uppercase;
+    color: #e9ecef;
+    font-size: 1.4em;
+    line-height: .95em;
+    transform: scale(1,0.95);
+    margin: 0;
+    padding: 0;
+    width: 5em;
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: 400;
+}
+section .heading .links {
+    display: inline-block;
+    font-size: 1.20 em;
+}
+section .heading .links>a.active, section .heading .links>span.active {
+    color: #e9ecef;
+}
+section .heading .links>a, section .heading .links>span {
+    color: #4b5157;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 10px;
+    -webkit-transition: all .15s ease-in-out 0s;
+    -moz-transition: all .15s ease-in-out 0s;
+    transition: all .15s ease-in-out 0s;
+    box-shadow: 0 0 0 #000;
+    transform: scale(1,1.1);
+}
+
+.tab-content{
+    margin-top: 30px;
+}
+ul.itemlist {
+    padding: 0;
+    list-style: none;
+    margin: 0 -.5%;
+}
+ul.itemlist li {
+    float: left;
+    position: relative;
+}
+
+ul.itemlist li {
+    width: 13.28571%;
+    margin: 0 .5%;
+}
+ul.itemlist li .poster {
+    width: 100%;
+    padding-bottom: 145%;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: #1e1e1e;
+}
+ul.itemlist li .poster img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+ul.itemlist li .info {
+    position: relative;
+    display: block;
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+ul.itemlist li .info .name {
+    overflow: hidden;
+    height: 2.53em;
+}
+ul.itemlist li .info .name h2, ul.itemlist li .info .name h3 {
+    font-size: 1em;
+}
+ul.itemlist li .info .name a {
+    color: #b7c0c8;
+    line-height: 1.1em;
+    font-size: 1.12em;
+    padding: 3px 0;
+    font-weight: 400;
+    -webkit-transition: all .15s ease-in-out 0s;
+    -moz-transition: all .15s ease-in-out 0s;
+    transition: all .15s ease-in-out 0s;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+ul.itemlist li .info .status {
+    position: absolute;
+    left: 0;
+    height: 1.5em;
+    top: -1.5em;
+    background: rgba(0,0,0,.9);
+    font-size: .9em;
+    padding: 3px 5px 0;
+    color: #b7c0c8;
+    font-weight: 500;
+}
+ul.itemlist li .info .status>span {
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #d4d9de;
+}

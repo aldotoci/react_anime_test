@@ -1,0 +1,186 @@
+
+body{
+    background-color: #161616;
+    font-family: "Baloo Tamma 2",Montserrat,"Open Sans",Lato,Tahoma;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+a {
+    color: #e9ecef;
+    text-decoration: none;
+    background-color: transparent;
+}
+img[src] {
+    visibility: visible;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+@media screen and (max-width: 1365px){
+    body, html {
+        font-size: 14.5px;
+    }
+}
+@media screen and (min-width: 1100px){
+    .container{
+        width: 1100px;
+    }
+    .content{
+        width: 1100px;
+    }
+}
+@media screen and (min-width: 1365px){
+    .container{
+        width: 1300px;
+    }
+    .content{
+        width: 1300px;
+    }
+}
+@media screen and (min-width: 1920px){
+    .container{
+        width: 1500px;
+    }
+    .content{
+        width: 1500px;
+    }
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+header .wrapper {
+    height: 70px;
+    text-align: right;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #e9ecef;
+    position: relative;
+}
+#logo {
+    float: left;
+    font-weight: 700;
+    font-size: 2em;
+    position: relative;
+    text-transform: uppercase;
+    display: block;
+
+    background: url("../images/logo.png") no-repeat;
+    background-size: contain;
+    width: 115px;
+    height: 40px;
+}
+header #logo h1, header #logo h2 {
+    font-size: 0;
+}
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;    
+    color: #ced4da;
+}
+#navbar>li {
+    display: inline;
+}
+#navbar>li>a{
+    color: #e9ecef;
+    text-decoration: none;
+    font-size: 1.2em;
+    line-height: 38px;
+    margin: 0 15px;
+}
+#navbar>li>a:hover{
+    color: #ced4da;
+}
+#navbar>li>a>img {
+    width: 30px;
+    display: inline;
+}
+
+
+.genre:hover .genre-content {
+    display: block;
+}
+.genre {
+    position: relative;
+    display: inline-block;
+}
+.genre-content {
+    display: none;
+    position: absolute;
+    background-color: #161616;
+    width: 520px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+.genre-content a {
+    background-color: #161616;
+    color: #ababab;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: inline;
+    width: 105px;
+    text-align: left;
+    float: left;
+}
+.genre-content a:hover {
+    background-color: #f8f9fa;
+    color: #242424;
+    }
+.genre:hover .genre-content {
+    display: inline;
+    margin-top: 30px;
+    margin-left: -100px;
+    box-shadow: 0 6px 20px 0 #000;
+}
+
+.types-content {
+    display: none;
+    position: absolute;
+    background-color: #161616;
+    width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+.types:hover .types-content {
+    display: block;
+}
+.types {
+    position: relative;
+    display: inline-block;
+}
+.types-content a {
+    background-color: #161616;
+    color: #ababab;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: inline;
+    width: 105px;
+    text-align: left;
+    float: left;
+}
+.types-content a:hover {
+    background-color: #f8f9fa;
+    color: #242424;
+    }
+.types:hover .types-content {
+    display: inline;
+    margin-top: 30px;
+    margin-left: -100px;
+    box-shadow: 0 6px 20px 0 #000;
+}
+.body{
+    margin-top: -40px;
+}
