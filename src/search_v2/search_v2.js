@@ -15,7 +15,7 @@ function Search(){
 
     useEffect(() => {
         console.log('http://127.0.0.1:8000/api/search/?keyword=' + search_q);
-        fetch('http://127.0.0.1:8000/api/search/?keyword=' + search_q, {})
+        fetch('https://infinite-bayou-47239.herokuapp.com/api/search/?keyword=' + search_q, {})
         .then(async res => {
             let json = await res.json();
             console.log(json);

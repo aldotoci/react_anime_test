@@ -15,7 +15,7 @@ export default function Watch(){
 
     useEffect(async () => {
         let search = 'http://127.0.0.1:8000/api/watch/?id=' + tittle + '&ep=' + ep; 
-        await fetch('http://127.0.0.1:8000/api/watch/?id=' + tittle + '&ep=' + ep).then(async res => {
+        await fetch('https://infinite-bayou-47239.herokuapp.com/api/watch/?id=' + tittle + '&ep=' + ep).then(async res => {
             let json = await res.json()
             let c_e = 'https:' +json[0]
             console.log(c_e);
@@ -24,7 +24,7 @@ export default function Watch(){
     }, [])
 
     useEffect(async () => {
-        await fetch('http://127.0.0.1:8000/api/category/?id=' + tittle).then(async res => {
+        await fetch('https://infinite-bayou-47239.herokuapp.com/api/category/?id=' + tittle).then(async res => {
             let json = await res.json()
             console.log(json);
             setData(json)

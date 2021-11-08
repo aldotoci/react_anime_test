@@ -12,7 +12,7 @@ function Search(){
     
     useEffect(() => {
         console.log('http://127.0.0.1:8000/api/genre/?genre=' + genre + '&page=' + page);
-        fetch('http://127.0.0.1:8000/api/genre/?genre=' + genre + '&page=' + page, {})
+        fetch('https://infinite-bayou-47239.herokuapp.com/api/genre/?genre=' + genre + '&page=' + page, {})
         .then(async res => {
             let json = await res.json();
             console.log(json.animes);

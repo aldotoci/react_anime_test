@@ -8,7 +8,7 @@ function Recently(){
 
     useEffect(() => {
         console.log('http://127.0.0.1:8000/api/recent/?page=1');
-        fetch('http://127.0.0.1:8000/api/recent/?page=1', {})
+        fetch('https://infinite-bayou-47239.herokuapp.com/api/recent/?page=1', {})
         .then(async res => {
             let json = await res.json();
             console.log(json);
@@ -17,18 +17,24 @@ function Recently(){
     }, [])
 
     function results_In_Html(){
-        return results.map((result) => (
-            <li key={results.indexOf(result)}>
-                <a className="poster tooltipstered" href={'/category/' + result.anime_id}>
-                    <img src={result.anime_poster} alt={result.body}/>
-                </a>
-                <div className="info">
-                    <div className="name">
-                    <h3><a href={'/category/' + result.anime_id} title={result.anime_title} data-jtitle={result.anime_title}>{result.anime_title}</a></h3>
+
+        return results.map((result) => {
+            let episode  = result.anime_episode_number.slice(8, result.anime_episode_number.length)
+            let tittle = result.anime_id.slice(0, result.anime_id.length - 9 - episode.length)
+            
+            return (
+                <li key={results.indexOf(result)}>
+                    <a className="poster tooltipstered" href={'/watch?tittle=' + tittle + '&ep=' + episode}>
+                        <img src={result.anime_poster} alt={result.body}/>
+                    </a>
+                    <div className="info">
+                        <div className="name">
+                        <h3><a href={'/watch?tittle=' + tittle + '&ep=' + episode} title={result.anime_title} data-jtitle={result.anime_title}>{result.anime_title}</a></h3>
+                        </div>
                     </div>
-                </div>
-            </li>
-        ))
+                </li>
+            )
+        })
     }
 
     return (

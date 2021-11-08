@@ -21,34 +21,42 @@ export default function Category(props){
     function createEpisodesRanges(){
         let displayer = []
         let nEp = data.total_episodes;
-
-        for(let i=0;i <= Math.floor(nEp/150);i++){
-            if(i === 0){
-                if(Math.floor(nEp/150) === i){
-                    displayer.push(<li key={i} onClick={() => setEpisodes_D(nEp)} className="active">{"1-" + nEp}</li>)
+        
+        if(nEp > 0){
+            console.log('Runnign first');
+            for(let i=0;i <= Math.floor(nEp/150);i++){
+                if(i === 0){
+                    if(Math.floor(nEp/150) === i){
+                        displayer.push(<li key={i} onClick={() => setEpisodes_D(nEp)} className="active">{"1-" + nEp}</li>)
+                    }else{
+                        displayer.push(<li key={i} onClick={() => setEpisodes_D((((i+1) * 150) + 1))} class="active">{"1-" + (((i+1) * 150) + 1)}</li>)
+                    }
+                    console.log('Did it one time.');
                 }else{
-                    displayer.push(<li key={i} onClick={() => setEpisodes_D((((i+1) * 150) + 1))} class="active">{"1-" + (((i+1) * 150) + 1)}</li>)
-                }
-                console.log('Did it one time.');
-            }else{
-                if(Math.floor(nEp/150) === i){
-                    displayer.push(<li key={i} onClick={(e) => {setEpisodes_D(nEp); e.target.className = "active"}}>{i + "51" + "-" + nEp}</li>)
-                }else{
-                displayer.push(<li key={i} onClick={() => setEpisodes_D(parseInt((i+1) +"51"))}>{i + "51" + "-" + (i+1) +"51"}</li>)
-                console.log('Did it one time.');
+                    if(Math.floor(nEp/150) === i){
+                        displayer.push(<li key={i} onClick={(e) => {setEpisodes_D(nEp); e.target.className = "active"}}>{i + "51" + "-" + nEp}</li>)
+                    }else{
+                    displayer.push(<li key={i} onClick={() => setEpisodes_D(parseInt((i+1) +"51"))}>{i + "51" + "-" + (i+1) +"51"}</li>)
+                    console.log('Did it one time.');
+                    }
                 }
             }
+            
+            return displayer
         }
+        return [<h2 className="tittle">Comming Soon</h2>]
 
-        return displayer
     }
     function createEpisodesBoxes(){
         let nEp = data.total_episodes;
         let epArray = []
-        for(let a=0; a < nEp; a++){
-            if(a < episodes_D  && a >= episodes_D-151){
-                epArray.push(<li><a href={'/watch?tittle='+ data.anime_id + '&ep=' + (a + 1)}>{a + 1}</a></li>) 
+        if(nEp !== 0){
+            for(let a=0; a < nEp; a++){
+                if(a < episodes_D  && a >= episodes_D-151){
+                    epArray.push(<li key={'box'+a}><a href={'/watch?tittle='+ data.anime_id + '&ep=' + (a + 1)}>{a + 1}</a></li>) 
+                }
             }
+            return epArray
         }
         return epArray
     }
