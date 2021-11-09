@@ -69,7 +69,7 @@ export default function Watch(){
     return data === undefined ? '' : (
             <section className="container">
                 <div className="heading sline"> 
-                    <h1 className="title">{data.anime_name}</h1>
+                    <h1 className="title"><a href={'/category/' + data.anime_id}>{data.anime_name}</a></h1>
                 </div>
                 <div className="alert alert-warning"> 
                         Please help us by sharing this site with your friends. It's the biggest motivation to help us to make the site better. Thanks! 
