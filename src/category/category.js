@@ -8,10 +8,10 @@ import './category.css'
 export default function Category(props){
     const [data,setData] = useState()
     const [episodes_D, setEpisodes_D] = useState(150)
-    let link = useLocation().pathname.slice(10,useLocation().pathname.length)
+    let id = useLocation().pathname.slice(10,useLocation().pathname.length)
 
     useEffect(async () => {
-        await fetch('http://127.0.0.1:8000/api/category/?id=' + link).then(async res => {
+        await fetch('https://infinite-bayou-47239.herokuapp.com/api/category/?id=' + id).then(async res => {
             let json = await res.json()
             console.log(json);
             setData(json)
