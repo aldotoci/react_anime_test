@@ -32,7 +32,7 @@ export default function Watch(){
         })
         }
         fetchData();
-    })
+    }, [tittle])
 
     function createEpisodesRanges(){
         let displayer = []
@@ -43,7 +43,7 @@ export default function Watch(){
                 if(Math.floor(nEp/150) === i){
                     displayer.push(<li key={i} onClick={() => setEpisodes_D(nEp)} className="active">{"1-" + nEp}</li>)
                 }else{
-                    displayer.push(<li key={i} onClick={() => setEpisodes_D((((i+1) * 150) + 1))} class="active">{"1-" + (((i+1) * 150) + 1)}</li>)
+                    displayer.push(<li key={i} onClick={() => setEpisodes_D((((i+1) * 150) + 1))} className="active">{"1-" + (((i+1) * 150) + 1)}</li>)
                 }
                 console.log('Did it one time.');
             }else{
@@ -84,11 +84,11 @@ export default function Watch(){
                 <section id="episodes">
                     <div className="content">
                         <div className="group">
-                            <ul class="ranges">
+                            <ul className="ranges">
                                 {createEpisodesRanges().map(li => {return li})}
                             </ul>
                         </div>
-                        <ul class="episodes">
+                        <ul className="episodes">
                             {
                                 createEpisodesBoxes().map(el => {return el})
                             }

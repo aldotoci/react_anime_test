@@ -11,7 +11,7 @@ function Header(){
                     <h2>Watch Anime Online Free</h2>
                     </a>
                     <ul id="navbar">
-                        <li className="genre">                            
+                        <li className="genre header">                            
                         {/* eslint-disable-next-line*/}
                             <a>GENRE</a>
                             <div className="genre-content">

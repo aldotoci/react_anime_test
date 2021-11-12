@@ -21,7 +21,7 @@ function Search(){
             console.log(json);
             setResult(json)
         })
-    })
+    }, [search_q])
     
 
     function results_In_Html(){
@@ -30,7 +30,7 @@ function Search(){
                 <a className="poster tooltipstered" href={'/category/' + result.anime_id} data-tip="lwp3?/cache681">
                     <img src={result.anime_poster} alt={result.body}/>
                 </a>
-                <div class="info">
+                <div className="info">
                     <div className="name">
                     <h3><a href={'/category/' + result.anime_id} title={result.anime_title} data-jtitle={result.anime_title}>{result.anime_title}</a></h3>
                     </div>

@@ -19,7 +19,7 @@ export default function Category(props){
             })
         }
         fetchData();
-    })
+    }, [id])
 
     function createEpisodesRanges(){
         let displayer = []
@@ -30,16 +30,16 @@ export default function Category(props){
             for(let i=0;i <= Math.floor(nEp/150);i++){
                 if(i === 0){
                     if(Math.floor(nEp/150) === i){
-                        displayer.push(<li key={i} onClick={() => setEpisodes_D(nEp)} className="active">{"1-" + nEp}</li>)
+                        displayer.push(<li key={'5189198'+i} onClick={() => setEpisodes_D(nEp)} className="active">{"1-" + nEp}</li>)
                     }else{
-                        displayer.push(<li key={i} onClick={() => setEpisodes_D((((i+1) * 150) + 1))} class="active">{"1-" + (((i+1) * 150) + 1)}</li>)
+                        displayer.push(<li key={'5189198'+i} onClick={() => setEpisodes_D((((i+1) * 150) + 1))} className="active">{"1-" + (((i+1) * 150) + 1)}</li>)
                     }
                     console.log('Did it one time.');
                 }else{
                     if(Math.floor(nEp/150) === i){
-                        displayer.push(<li key={i} onClick={(e) => {setEpisodes_D(nEp); e.target.className = "active"}}>{i + "51-" + nEp}</li>)
+                        displayer.push(<li key={'5189198'+i} onClick={(e) => {setEpisodes_D(nEp); e.target.className = "active"}}>{i + "51-" + nEp}</li>)
                     }else{
-                    displayer.push(<li key={i} onClick={() => setEpisodes_D(parseInt((i+1) +"51"))}>{i + "51-" + (i+1) +"51"}</li>)
+                    displayer.push(<li key={'5189198'+i} onClick={() => setEpisodes_D(parseInt((i+1) +"51"))}>{i + "51-" + (i+1) +"51"}</li>)
                     console.log('Did it one time.');
                     }
                 }
@@ -56,7 +56,7 @@ export default function Category(props){
         if(nEp !== 0){
             for(let a=0; a < nEp; a++){
                 if(a < episodes_D  && a >= episodes_D-151){
-                    epArray.push(<li key={'box'+a}><a href={'/watch?tittle='+ data.anime_id + '&ep=' + (a + 1)}>{a + 1}</a></li>) 
+                    epArray.push(<li key={'132'+a}><a href={'/watch?tittle='+ data.anime_id + '&ep=' + (a + 1)}>{a + 1}</a></li>) 
                 }
             }
             return epArray
@@ -95,11 +95,11 @@ export default function Category(props){
                 <section id="episodes">
                     <div className="content">
                         <div className="group">
-                            <ul class="ranges">
+                            <ul className="ranges">
                                 {createEpisodesRanges().map(li => {return li})}
                             </ul>
                         </div>
-                        <ul class="episodes">
+                        <ul className="episodes">
                             {
                                 createEpisodesBoxes().map(el => {return el})
                             }

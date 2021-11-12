@@ -43,7 +43,7 @@ function Recently(){
                 <div className="heading">
                     <h2 className="title">RECENTLY UPDATED</h2>
                     <div className="links tabs"> 
-                        <span data-name="updated_all" class="active">All</span> 
+                        <span data-name="updated_all" className="active">All</span> 
                         <span data-name="updated_sub">Subbed</span> 
                         <span data-name="updated_dub">Dubbed</span> 
                         <span data-name="updated_chinese">Chinese</span> 
