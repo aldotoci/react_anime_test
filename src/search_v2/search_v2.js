@@ -21,7 +21,7 @@ function Search(){
             console.log(json);
             setResult(json)
         })
-    }, [])
+    })
     
 
     function results_In_Html(){

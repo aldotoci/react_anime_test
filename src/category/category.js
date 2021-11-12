@@ -10,13 +10,16 @@ export default function Category(props){
     const [episodes_D, setEpisodes_D] = useState(150)
     let id = useLocation().pathname.slice(10,useLocation().pathname.length)
 
-    useEffect(async () => {
-        await fetch('https://infinite-bayou-47239.herokuapp.com/api/category/?id=' + id).then(async res => {
+    useEffect(() => {
+        async function fetchData(){
+            await fetch('https://infinite-bayou-47239.herokuapp.com/api/category/?id=' + id).then(async res => {
             let json = await res.json()
             console.log(json);
             setData(json)
-        })
-    }, [])
+            })
+        }
+        fetchData();
+    })
 
     function createEpisodesRanges(){
         let displayer = []
@@ -34,9 +37,9 @@ export default function Category(props){
                     console.log('Did it one time.');
                 }else{
                     if(Math.floor(nEp/150) === i){
-                        displayer.push(<li key={i} onClick={(e) => {setEpisodes_D(nEp); e.target.className = "active"}}>{i + "51" + "-" + nEp}</li>)
+                        displayer.push(<li key={i} onClick={(e) => {setEpisodes_D(nEp); e.target.className = "active"}}>{i + "51-" + nEp}</li>)
                     }else{
-                    displayer.push(<li key={i} onClick={() => setEpisodes_D(parseInt((i+1) +"51"))}>{i + "51" + "-" + (i+1) +"51"}</li>)
+                    displayer.push(<li key={i} onClick={() => setEpisodes_D(parseInt((i+1) +"51"))}>{i + "51-" + (i+1) +"51"}</li>)
                     console.log('Did it one time.');
                     }
                 }

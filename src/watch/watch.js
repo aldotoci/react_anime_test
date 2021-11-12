@@ -6,30 +6,33 @@ import './watch.css'
 
 export default function Watch(){
     const [data,setData] = useState()
-    const [ep_watch, setEpWatch] = useState()
     const [currentEpisode,setCurrentEpisode] = useState()
     const queryParams = new URLSearchParams(window.location.search);
     const tittle = queryParams.get('tittle');
     const ep = queryParams.get('ep');
     const [episodes_D, setEpisodes_D] = useState(150)
 
-    useEffect(async () => {
-        let search = 'http://127.0.0.1:8000/api/watch/?id=' + tittle + '&ep=' + ep; 
-        await fetch('https://infinite-bayou-47239.herokuapp.com/api/watch/?id=' + tittle + '&ep=' + ep).then(async res => {
+    useEffect(() => {
+        async function fetchData(){
+            await fetch('https://infinite-bayou-47239.herokuapp.com/api/watch/?id=' + tittle + '&ep=' + ep).then(async res => {
             let json = await res.json()
             let c_e = 'https:' +json[0]
-            console.log(c_e);
             setCurrentEpisode(c_e)
-        })
-    }, [])
+            })
+        }
+        fetchData();
+    })
 
-    useEffect(async () => {
-        await fetch('https://infinite-bayou-47239.herokuapp.com/api/category/?id=' + tittle).then(async res => {
+    useEffect(() => {
+        async function fetchData(){
+            await fetch('https://infinite-bayou-47239.herokuapp.com/api/category/?id=' + tittle).then(async res => {
             let json = await res.json()
             console.log(json);
             setData(json)
         })
-    }, [])
+        }
+        fetchData();
+    })
 
     function createEpisodesRanges(){
         let displayer = []
@@ -45,9 +48,9 @@ export default function Watch(){
                 console.log('Did it one time.');
             }else{
                 if(Math.floor(nEp/150) === i){
-                    displayer.push(<li key={i} onClick={(e) => {setEpisodes_D(nEp); e.target.className = "active"}}>{i + "51" + "-" + nEp}</li>)
+                    displayer.push(<li key={i} onClick={(e) => {setEpisodes_D(nEp); e.target.className = "active"}}>{i + "51-" + nEp}</li>)
                 }else{
-                displayer.push(<li key={i} onClick={() => setEpisodes_D(parseInt((i+1) +"51"))}>{i + "51" + "-" + (i+1) +"51"}</li>)
+                displayer.push(<li key={i} onClick={() => setEpisodes_D(parseInt((i+1) +"51"))}>{i + "51-" + (i+1) +"51"}</li>)
                 console.log('Did it one time.');
                 }
             }

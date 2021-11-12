@@ -5,7 +5,6 @@ import { useState } from "react";
 
 function Search(){
     const [searchQuery, setSearchQuery] = useState('')
-    const [results, setResults] = useState()
     let history = useHistory();
 
     function onQueryChange(e){

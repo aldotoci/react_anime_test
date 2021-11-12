@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route,Switch } from 'react-router-dom';
 import './index.css';
 import Header from './header/header';
 import Search from './search/search';
-import Search_v2  from './search_v2/search_v2';
+import Search2  from './search_v2/search_v2';
 import Category from './category/category';
 import Watch from './watch/watch';
 import reportWebVitals from './reportWebVitals';
@@ -22,7 +22,7 @@ ReactDOM.render(
         </Route>
         <Route path="/search/">
           <Header/>
-          <Search_v2/>
+          <Search2/>
         </Route>
         <Route path="/watch/">
           <Header/>

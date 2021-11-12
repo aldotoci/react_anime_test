@@ -1,5 +1,4 @@
 import React from "react";
-import { useHistory } from "react-router";
 import { useState,useEffect } from "react";
 import '../search_v2/search_v2.css';
 import './genre.css'
@@ -18,7 +17,7 @@ function Search(){
             console.log(json.animes);
             setResult(json.animes);
     })
-    }, [])
+    })
     
     function results_In_Html(){
         return results.map((result) => (
